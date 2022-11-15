@@ -1,0 +1,12 @@
+.shop-container{
+    display: flex;
+}
+.products-container{
+    width: 65%;
+    margin: 0% 3%;
+    border-right: 1px solid thistle;
+}
+.cart-container{
+    float: right;
+    width: 20%;
+}

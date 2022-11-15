@@ -1,0 +1,21 @@
+.product-container{
+    display: flex;
+}
+.product-img{
+    width: 40%;
+    margin: 15px;
+}
+.product-img img{
+    width: 100%;
+}
+.product-name{
+    color: blueviolet;
+}
+.add-cart{
+    background-color: goldenrod;
+    width: 35%;
+    height: 35px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
