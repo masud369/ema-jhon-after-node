@@ -56,6 +56,7 @@ const Login = () => {
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
+        console.log('errorCode is ',errorCode,'errorMessage is ',errorMessage, 'email is ',email)
       });
   };
   const fbProvider = new FacebookAuthProvider();
@@ -88,7 +89,7 @@ const Login = () => {
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = FacebookAuthProvider.credentialFromError(error);
-
+        console.log('errorCode is ',errorCode,'errorMessage is ',errorMessage, 'FacebookAuthProvider is ',credential)
         // ...
       });
   };
@@ -121,6 +122,7 @@ const Login = () => {
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = GithubAuthProvider.credentialFromError(error);
+        console.log('errorCode is ',errorCode,'errorMessage is ',errorMessage, 'GithubAuthProvider is ',credential)
         // ...
       });
   };
@@ -181,6 +183,7 @@ const Login = () => {
           newData.error = signupError;
           setFrUser(newData)
           // ..
+          console.log('errorCode is ',errorCode,'errorMessage is ',errorMessage)
         });
     }
     if (!newUser && fruser.email && fruser.password) {
@@ -216,6 +219,7 @@ const Login = () => {
           newData.success = false;
           newData.error = signupError;
           setFrUser(newData)
+          console.log('errorCode is ',errorCode,'errorMessage is ',errorMessage)
         });
     }
   };
@@ -237,16 +241,18 @@ const Login = () => {
       <input
         type="checkbox"
         name="signup"
+        autocomplete
         onChange={() => setNewUser(!newUser)}
         id="signup"
       />
       <label htmlFor="signup"> Sign Up</label> <br />
       <form onSubmit={handelSubmit}>
-        {newUser && <input type="text" placeholder="Your name" />}
+        {newUser && <input autocomplete type="text" placeholder="Your name" />}
         <br />
         <br />
         Email:
         <input
+          autocomplete
           type="email"
           name="email"
           id="mail"
@@ -257,6 +263,7 @@ const Login = () => {
         <br />
         Password:{" "}
         <input
+          autocomplete
           type="password"
           name="password"
           onBlur={checkEmail}
@@ -265,7 +272,7 @@ const Login = () => {
         />
         <br />
         <br />
-        <input type="submit" value="Sign in" />
+        <input autocomplete type="submit" value="Sign in" />
         {/* <p>{fruser}</p> */}
         {console.log(fruser.email, fruser.password)}</form>
         {fruser.success && <p style={{color:'green'}}>signed {!newUser? 'in':'up' } properly</p>}

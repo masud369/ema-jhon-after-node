@@ -12,7 +12,7 @@ const Shipment = () => {
         console.log("from submitted",data)
         const orderDetails = {...loginUser, products:sevCart, shipment:data}
 
-        fetch("http://localhost:5000/orderProducts",{
+        fetch("https://intense-harbor-52396.herokuapp.com/orderProducts",{
           method:"POST",
           headers:{"Content-Type":"application/json"},
           body:JSON.stringify(orderDetails)

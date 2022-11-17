@@ -1,6 +1,6 @@
 const firebaseConfig = {
     apiKey: "AIzaSyDd9kOI8KbdFrKX5nF7TzNkEJlPTS8eybQ",
-    authDomain: "fir-recap-3cc1e.firebaseapp.com",
+    authDomain: "ema-jhon-simple369.web.app",
     projectId: "fir-recap-3cc1e",
     storageBucket: "fir-recap-3cc1e.appspot.com",
     messagingSenderId: "973994111735",

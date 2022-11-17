@@ -16,7 +16,7 @@ const Review = () => {
     const savCart = getDatabaseCart();
     const prosuctKeys = Object.keys(savCart);
 
-fetch("http://localhost:5000/productbyKeys",{
+fetch("https://intense-harbor-52396.herokuapp.com/productbyKeys",{
   method:"POST",
   headers:{"Content-Type":"application/json"},
   body:JSON.stringify(prosuctKeys)
